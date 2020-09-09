@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0">
+  </script>
+  <title>Colorimetria</title>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Colorimetria</h1>
+    </header>
+    <div>
+      <p>Ingresa los datos a continuacion para calcular "Y"</p>
+    </div>
+    <section class="main">
+      <form action="">
+        <label for="Color">Color</label>
+        <input list="color" id="select__color">
+        <datalist id="color">
+            <option value="Blanco"></option>
+            <option value="Rojo"></option>
+            <option value="Verde"></option>
+            <option value="Azul"></option>
+            <option value="Amarillo"></option>
+            <option value="Turquesa"></option>
+            <option value="Morado"></option>
+            <option value="Negro"></option>
+        </datalist>
+        <!-- <label for="color">Color</label>
+        <input type="text" id="color"> -->
+        <label for="porcentaje">Porcentaje</label>
+        <input type="number" id="porcentaje" min="0" max="1" step="0.01">
+        <input type="submit" value="Calcular" id="submit">
+      </form>      
+      <div class="solucion" id="solucion">
+        El resultado de Y es: <span id="respuesta"></span>
+      </div>
+    </section>
+    <div id="grafica">
+      <canvas id="miGrafica">
+      </canvas>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
